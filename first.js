@@ -30,10 +30,4 @@ function toggleText3() {
   }
 }
 
-// function mouseDown() {
-//   document.getElementByClass("header1").style.color = "red";
-// }
 
-// function mouseUp() {
-//   document.getElementByClass("header1").style.color = "green";
-// }

@@ -9,26 +9,61 @@
   src: url(MavenProBold.ttf);
 }
 
+@font-face {
+  font-family: mavenpromedium;
+  src: url(MavenProMedium.ttf);
+}
+
+
 
 body{
 	background-color:#CEEFBE;
 }
 
-h1{
+
+.title{
+  text-align:center;
+  color:#184E10;
+  font-size:470px;
+  font-family:MavenProBlack;
+  text-decoration:none;
+  position:fixed;
+  left:155px;
+  top:-140px;
+}
+
+.arrow {
+  border: solid #184E10;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 8px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position:fixed;
+  top:700px;
+  left:825px;
+
+}
+
+a.h1{
+  text-decoration:none;
 	text-align:center;
+  left:610px;
+  top:30px;
+  position:absolute;
 	color:#184E10;
 	font-size:130px;
 	font-family:MavenProBlack;
-	margin:10px;
-}
+	margin:30px;
+ }
 
-/*.header1 {
-  width: 100%;
-  padding: 25px;
-  background-color: coral;
-  color: white;
-  font-size: 25px;
-}*/
+h3{
+  font-family:mavenprobold;
+  font-size:25px;
+}
 
 .header1, .header2, .header3 {
 	color:#184E10;
@@ -36,22 +71,25 @@ h1{
 	font-family:MavenProBold;
 	text-align: left;
 	padding-left:240px;
+  padding-top:60px;
 }
 
-#definition{
 
+a{
 
-
-}
-
-#wikipedia{
-
+text-decoration:none;
+text-decoration-line: underline;
+color:#184E10;
 
 }
+#definition, #wikipedia, #psychology{
 
-#psychology{
+font-family:MavenProMedium;
+font-size:20px;
+color:#184E10;
+padding-left:260px;
+padding-right:260px;
 
-  
 }
 
 /*.first:hover {

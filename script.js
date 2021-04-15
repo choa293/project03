@@ -10,27 +10,23 @@ function getNewRandomColor()
 }
 
 var Airtable = require("airtable");
-
-getNewRandomSong();
-
-function getNewRandomSong()
-{
-
-  var songs = [ {name: 'Green Eyes by Arlo Parks', url: 'GreenEyesbyArloParks.mp3' } , {name: 'Green by Cavetown', url: 'GreenbyCavetown.mp3'} , {name: 'Green River by Creedence Clearwater Revival', url: 'GreenRiverbyCreedenceClearwaterRevival.mp3'} , 
-  {name: 'Green by Kody West', url: 'GreenbyKodyWest.mp3'} , {name: 'Green Mile by SZA', url: 'GreenMilebySZA.mp3'} , {name: 'Green Light by Lorde', url: 'GreenLightbyLorde.mp3'} , {name: 'Green Light by Lorde', url: 'GreenLightbyLorde.mp3'} , 
-  {name: 'Green by Monty Kay', url: 'GreenbyMontyKay.mp3'} , {name: 'Green by Mun$', url: 'GreenbyMun$.mp3'} , {name: 'Green Gang by The Boys', url: 'GreenGangbyTheBoys.mp3'}];
-  var rand = songs[Math.floor(Math.random() * songs.length)];
-  
-  console.log(rand);
-  
-}
-
-
 // use the airtable library to get a variable that represents one of our bases
 // We needed to put in the right apiKey and
 // base ID here!
+
 var base = new Airtable({ apiKey: "keyZ0WSzwvXJQghO6" }).base(
   "appuMf5Lo3n0SYdRH");
+
+
+var songs = ["songs/GreenEyesbyArloParks.mp3","songs/GreenbyCavetown.mp3", "songs/GreenRiverbyCreedenceClearwaterRevival.mp3", "songs/GreenbyKodyWest.mp3", "songs/GreenbyKodyWest.mp3", "songs/GreenMilebySZA.mp3","songs/GreenLightbyLorde.mp3",
+"songs/GreenbyMontyKay.mp3", "songs/GreenbyMun$.mp3", "songs/GreenGangbyTheBoys.mp3"];
+var player = document.getElementById("player");
+getNewRandomSong();
+function getNewRandomSong(){
+  var rand = songs[Math.floor(Math.random() * songs.length)];
+  player.src = rand;
+  player.load();
+};
 
 // Get the "people" table from the base, select ALL the records, and specify the callback functions that will receive each page of data
 base("collection").select({}).eachPage(gotPageOfPeople, gotAllPeople);
@@ -67,19 +63,29 @@ function gotAllPeople(err) {
 function displayNinePeople()
 {
 
-  var i;
+  var i=0;
   
-  for (i = 0; i < 9; i++) {
+  while (i<9) {
+
   console.log(i);
   var rand = people[Math.floor(Math.random()* people.length)];
   console.log(rand);
-  document.querySelector("'box' + i");
+  document.querySelector("#box" + i);
+  var box = document.querySelector("#box" + i);
+
+  if (rand.fields.type == "image") {
+  i = i + 1;
+  var url = rand.fields.Attachments[0].url;
+  box.style.backgroundImage = "url(" + url + ")";
+}
 
 }
 }
 
 // show all the characters
 function showPeople() {
+
+
   console.log("showPeople()");
 
   // find the shelf element
@@ -91,7 +97,6 @@ function showPeople() {
     // Print out what a single person's data looks like
     console.log("SHOWING THE PERSON");
     // console.log(person.fields);
-
 const personContainer = document.createElement("div");
   personContainer.classList.add("personcontainer");
 
@@ -106,6 +111,32 @@ const personContainer = document.createElement("div");
     personAttachments.src = person.fields.Attachments[0].url;
     // Add this newly created img element to the inside of our container div
     peopleContainer.appendChild(personAttachments);
+
 });
   
 }
+
+function clickButton(){
+
+  displayNinePeople();
+  getNewRandomSong();
+  getNewRandomColor();
+
+};
+
+
+
+
+// function createModal(event) {
+//     const modal = document.createElement('div');
+//     modal.classList.add('modal');
+//     modal.addEventListener('click', () => {
+//         modal.remove();    
+//     }, false);
+//     const image = document.createElement('img');
+//     image.classList.add('modal-image');
+//     image.src = event.target.src;
+//     modal.appendChild(image);
+//     document.body.appendChild(image);
+// };
+

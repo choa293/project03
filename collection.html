@@ -9,30 +9,33 @@
     <script src="script.js" defer ></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
   </head>
 
   <body>
 
     
-<button class="home"><i class="fa fa-home"></i></button>
+<a href="first.html"><button class="home"><i class="fa fa-home"></i></button></a>
 
-<button class="footer" onclick="getNewRandomColor()" "getNewRandomSong()" "displayNinePeople()"> keep exploring </button>c
+<button class="footer" onclick="clickButton()"> keep exploring </button>
 
-<audio controls>
-  <source class = "song" src="songs/GreenEyesbyArloParks.mp3" type="audio/mp3">
+<audio controls id="player">
+  <source type="audio/mp3">
 </audio>
 
+
 <div class="grid-container">
-  <div class="grid-item one" id="box0">1</div>
-  <div class="grid-item two" id="box1">2</div>
-  <div class="grid-item three" id="box2">3</div>
-  <div class="grid-item four" id="box3">4</div>
-  <div class="grid-item five" id="box4">5</div>
-  <div class="grid-item six" id="box5">6</div>
-  <div class="grid-item seven" id="box6">7</div>
-  <div class="grid-item eight" id="box7">8</div>
-  <div class="grid-item nine" id="box8">9</div>
+  <div class="grid-item one" id="box0"></div>
+  <div class="grid-item two" id="box1"></div>
+  <div class="grid-item three" id="box2"></div>
+  <div class="grid-item four" id="box3"></div>
+  <div class="grid-item five" id="box4"></div>
+  <div class="grid-item six" id="box5"></div>
+  <div class="grid-item seven" id="box6"></div>
+  <div class="grid-item eight" id="box7"></div>
+  <div class="grid-item nine" id="box8"></div>
 </div>
+
 
   </body>
 

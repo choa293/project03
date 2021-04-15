@@ -58,12 +58,15 @@ a.h1{
 	font-size:130px;
 	font-family:MavenProBlack;
 	margin:30px;
+
  }
 
 h3{
   font-family:mavenprobold;
   font-size:25px;
+
 }
+
 
 .header1, .header2, .header3 {
 	color:#184E10;
@@ -71,7 +74,10 @@ h3{
 	font-family:MavenProBold;
 	text-align: left;
 	padding-left:240px;
-  padding-top:60px;
+  padding-top:50px;
+  position:relative;
+  top:45px;
+
 }
 
 
@@ -100,12 +106,12 @@ padding-right:260px;
 
 .home{
   text-align;left;
-  background-color:#CEEFBE;
+  background-color:transparent;
   border: none;
   color: #184E10;
   padding: 35px 35px;
   margin-left:30px;
   margin-top:10px;
-  font-size: 55px;
+  font-size: 65px;
   cursor: pointer;
 }

@@ -11,28 +11,28 @@
 
 
 body{
-	background-color:#CEEFBE;
+  background-color:#CEEFBE;
 }
 
 h1{
-	text-align:center;
-	color:#184E10;
-	font-size:130px;
-	font-family:MavenProBlack;
-	margin:10px;
+  text-align:center;
+  color:#184E10;
+  font-size:130px;
+  font-family:MavenProBlack;
+  margin:10px;
 }
 
 h2{
-	color:#184E10;
-	font-size:70px;
-	font-family:MavenProBold;
-	text-align: left;
-	padding-left:240px;
+  color:#184E10;
+  font-size:70px;
+  font-family:MavenProBold;
+  text-align: left;
+  padding-left:240px;
 }
 
 .home{
   text-align;left;
-  background-color:#CEEFBE;
+  background-color:transparent;
   border: none;
   color: #184E10;
   padding: 35px 35px;
@@ -46,11 +46,11 @@ h2{
 .footer{
   font-family:MavenProBold;
   text-align;right;
-  background-color:#184E10;
+  background-color:transparent;
   border: none;
-  color: white;
-  padding: 35px 35px;
-  margin-left:1200px;
+  color: #184E10;
+  padding: 40px 15px;
+  margin-left:1350px;
   margin-top:800px;
   font-size: 25px;
   cursor: pointer;
@@ -87,63 +87,28 @@ h2{
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.64);
+  padding: 5%;
 }
+
 .modal-image {
     max-height: 100%;
     width: auto;
+  height: 100%;
+  width: 100%;
 }
 
-
-.one{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.two{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.three{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.four{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.five{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.six{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.circle-audio-player {
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-}
-#playerContainer {
-  padding: 24px;
-}
-  audio{
-    padding-left: 1140px;
-  }
+#player{
+  top:50px;
+  left:1335px;
+  position:absolute;
+ }
